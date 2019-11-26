@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Lab3 - second module</string>
+    <string name="output">Welcome to other module activity!</string>
+</resources>

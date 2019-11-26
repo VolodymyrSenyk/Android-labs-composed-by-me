@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Lab3 - first module</string>
+    <string name="go_next_button_label">Next screen</string>
+
+    <string name="my_button_action" translatable="false">com.senyk.volodymyr.lab3.BUTTON_ACTION</string>
+</resources>
