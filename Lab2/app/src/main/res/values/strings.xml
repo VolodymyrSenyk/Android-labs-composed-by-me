@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Lab2</string>
+
+    <string name="my_permission" translatable="false">
+        com.senyk.volodymyr.lab2.permission.MY_PERMISSION
+    </string>
+    <string name="my_permission_label">My permission</string>
+    <string name="my_permission_description">launching another activity</string>
+
+    <string name="go_next_button_label">Next screen</string>
+    <string name="output">Welcome to a protected activity!</string>
+
+    <string name="permission_not_granted">To perform this action you need to provide permission</string>
+    <string name="to_settings">Go to settings</string>
+</resources>
