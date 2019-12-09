@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Lab5</string>
+
+    <!-- Work with permissions -->
+    <string name="contacts_read_permission">android.permission.READ_CONTACTS</string>
+    <string name="permission_not_granted">To perform this action you need to provide permission</string>
+    <string name="to_settings">Go to settings</string>
+
+</resources>
