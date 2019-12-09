@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Lab4</string>
+
+    <!-- Charge status -->
+    <string name="is_charging">Charger connected</string>
+    <string name="is_not_charging">Charger disconnected</string>
+
+    <!-- Notifications -->
+    <string name="name_foreground">Charger connection status</string>
+    <string name="stop_service">Stop</string>
+
+</resources>
