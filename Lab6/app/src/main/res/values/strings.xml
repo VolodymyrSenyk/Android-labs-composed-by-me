@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Lab6</string>
+    <string name="save_note_button">Save</string>
+    <string name="note_successfully_changed_message">Note successfully changed</string>
+</resources>
