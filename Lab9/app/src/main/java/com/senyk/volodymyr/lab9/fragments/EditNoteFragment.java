@@ -11,12 +11,12 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProviders;
 import androidx.navigation.fragment.NavHostFragment;
 
 import com.senyk.volodymyr.lab9.R;
 import com.senyk.volodymyr.lab9.models.NotePojo;
-import com.senyk.volodymyr.lab9.repository.SQLiteRepository;
-import com.senyk.volodymyr.lab9.viewmodel.helpers.ResourcesProvider;
+import com.senyk.volodymyr.lab9.viewmodel.factories.ViewModelFactory;
 import com.senyk.volodymyr.lab9.viewmodel.viewmodels.EditNoteViewModel;
 
 import java.util.Calendar;
@@ -29,9 +29,8 @@ public class EditNoteFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        final EditNoteViewModel viewModel = new EditNoteViewModel(
-                SQLiteRepository.getInstance(requireContext()),
-                new ResourcesProvider(requireContext().getResources()));
+        final EditNoteViewModel viewModel = ViewModelProviders.of(this, new ViewModelFactory(requireContext()))
+                .get(EditNoteViewModel.class);
 
         if (this.getArguments() != null) {
             this.args = EditNoteFragmentArgs.fromBundle(this.getArguments());

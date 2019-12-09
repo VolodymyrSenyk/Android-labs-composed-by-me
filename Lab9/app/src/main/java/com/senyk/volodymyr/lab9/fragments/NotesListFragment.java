@@ -9,6 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProviders;
 import androidx.navigation.fragment.NavHostFragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -17,7 +18,7 @@ import com.senyk.volodymyr.lab9.R;
 import com.senyk.volodymyr.lab9.adapters.NotesListAdapter;
 import com.senyk.volodymyr.lab9.adapters.OnItemClickedListener;
 import com.senyk.volodymyr.lab9.models.NotePojo;
-import com.senyk.volodymyr.lab9.repository.SQLiteRepository;
+import com.senyk.volodymyr.lab9.viewmodel.factories.ViewModelFactory;
 import com.senyk.volodymyr.lab9.viewmodel.viewmodels.NotesListViewModel;
 
 import java.util.List;
@@ -27,7 +28,8 @@ public class NotesListFragment extends Fragment implements OnItemClickedListener
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        NotesListViewModel viewModel = new NotesListViewModel(SQLiteRepository.getInstance(requireContext()));
+        NotesListViewModel viewModel = ViewModelProviders.of(this, new ViewModelFactory(requireContext()))
+                .get(NotesListViewModel.class);
 
         final NotesListAdapter adapter = new NotesListAdapter(this);
         final RecyclerView notesList = view.findViewById(R.id.notes_list);
